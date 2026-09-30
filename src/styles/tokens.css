@@ -22,7 +22,7 @@
   --hair-2: rgba(255, 255, 255, 0.06);
 
   /* Accent — ONE accent. May be a 2–4 stop gradient within ~80° of hue. */
-  --primary: #003366;
+  --primary: #4da8da; /* Lighter blue for readability on dark backgrounds */
   --accent: #FFB800;
   --accent-ink: #001f3f;
 

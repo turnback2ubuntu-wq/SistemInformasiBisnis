@@ -32,7 +32,7 @@ export default function App() {
           title="Sistem Informasi Bisnis"
           subtitle="Kode MK: IF260624 · 3 SKS · Semester 5/7"
           foot="Universitas PGRI Ronggolawe Tuban — Fakultas Teknik | Andy Haryoko, ST., MT."
-          bgImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000"
+          image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000"
         />
       </Slide>
 
@@ -54,20 +54,12 @@ export default function App() {
               hint: "RAD Tools, proposal proyek SIB"
             },
             {
-              title: "Minggu 8: UTS",
-              hint: "Materi minggu 1–7"
+              title: "Minggu 8–12: UTS & Pembangunan Sistem",
+              hint: "UTS, Perancangan, dan Implementasi UMKM"
             },
             {
-              title: "Minggu 9–12: Building & Managing Systems",
-              hint: "Perancangan, implementasi, pengujian aplikasi UMKM"
-            },
-            {
-              title: "Minggu 13–15: Evaluasi & Publikasi Jurnal",
-              hint: "Penulisan jurnal, review, presentasi final"
-            },
-            {
-              title: "Minggu 16: UAS",
-              hint: "SubCPMK 4 & 5"
+              title: "Minggu 13–16: Evaluasi & Publikasi Jurnal",
+              hint: "Penulisan, Review, Presentasi, UAS"
             }
           ]}
         />
@@ -117,20 +109,22 @@ export default function App() {
       <Slide notes="Kaitkan dengan studi kasus Amazon vs Walmart dari buku Laudon.">
         <Contrast
           title="Peran SIB dalam Strategi Bisnis Modern"
-          muted={
-            <div>
-              <h3>Tanpa SIB</h3>
-              <p>Keputusan berbasis intuisi, data tersebar, respons lambat.</p>
-            </div>
-          }
-          accent={
-            <Build at={1}>
-              <div>
-                <h3>Dengan SIB</h3>
-                <p>Keputusan berbasis data real-time, integrasi lintas fungsi, keunggulan kompetitif.</p>
-              </div>
-            </Build>
-          }
+          left={{
+            label: "Tanpa SIB",
+            points: [
+              "Keputusan berbasis intuisi",
+              "Data tersebar di berbagai unit",
+              "Respons lambat terhadap pasar"
+            ]
+          }}
+          right={{
+            label: "Dengan SIB",
+            points: [
+              "Keputusan berbasis data real-time",
+              "Integrasi lintas fungsi yang baik",
+              "Menciptakan keunggulan kompetitif"
+            ]
+          }}
         />
       </Slide>
 
