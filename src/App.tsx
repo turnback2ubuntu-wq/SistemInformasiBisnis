@@ -373,8 +373,7 @@ export default function App() {
             </>
           }
           media={
-            <CodeWindow language="tsx">
-{`// ProductList.tsx
+            <CodeWindow title="ProductList.tsx" code={`// ProductList.tsx
 import React, { useState, useEffect } from 'react';
 import { getProducts } from './api';
 
@@ -396,7 +395,7 @@ export function ProductList() {
     </table>
   );
 }`}
-            </CodeWindow>
+            />
           }
         />
       </Slide>
