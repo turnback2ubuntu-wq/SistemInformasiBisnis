@@ -36,7 +36,82 @@ export default function App() {
         />
       </Slide>
 
-      {/* 2. Agenda / Course Overview */}
+      {/* 2. Kontrak Kuliah */}
+      <Slide notes="Kontrak kuliah, aturan, dan ketentuan tugas mandiri.">
+        <Reveal>
+          <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Kontrak Kuliah & Aturan</h2>
+        </Reveal>
+        <Tabs
+          tabs={[
+            {
+              label: "Deskripsi",
+              content: (
+                <div>
+                  <h3 style={{ marginBottom: '1rem' }}>Deskripsi Singkat</h3>
+                  <p>Mata kuliah ini membahas konsep, peran, dan penerapan sistem informasi dalam mendukung proses bisnis dan pengambilan keputusan manajerial.</p>
+                  <p style={{ marginTop: '1rem' }}>Melalui studi kasus UMKM dan Tugas Besar Mandiri, mahasiswa diharapkan mampu merancang, mengimplementasikan, serta mempresentasikan solusi sistem informasi yang relevan untuk mendukung keunggulan kompetitif organisasi.</p>
+                </div>
+              )
+            },
+            {
+              label: "Aturan",
+              content: (
+                <div>
+                  <h3 style={{ marginBottom: '1rem' }}>Aturan Perkuliahan</h3>
+                  <ul style={{ lineHeight: '1.8' }}>
+                    <li>Kehadiran minimal <strong>75%</strong> dari total pertemuan.</li>
+                    <li>Keterlambatan maksimal <strong>15 menit</strong>; lebih dari itu dianggap tidak hadir.</li>
+                    <li><strong>Plagiarisme</strong> dalam bentuk apa pun dikenakan sanksi akademik sesuai kebijakan.</li>
+                    <li>Komunikasi resmi melalui <strong>Google Classroom</strong>.</li>
+                    <li>Pengumpulan tugas harus sesuai <strong>tenggat waktu</strong> yang ditentukan.</li>
+                  </ul>
+                </div>
+              )
+            },
+            {
+              label: "Tugas Besar",
+              content: (
+                <div>
+                  <h3 style={{ marginBottom: '1rem' }}>Ketentuan & Tahapan Tugas Besar</h3>
+                  <p><strong>Sifat:</strong> Mandiri (individu). Mahasiswa membuat aplikasi sederhana untuk UMKM di sekitar tempat tinggal, output berupa jurnal.</p>
+                  <p style={{ marginTop: '1rem' }}><strong>Format Jurnal:</strong> Judul, Abstrak, Pendahuluan, Metode, Hasil & Pembahasan, Kesimpulan, Referensi (min. 5).</p>
+                  <p style={{ marginTop: '1rem' }}><strong>Tahapan:</strong> Proposal → Pengembangan Aplikasi → Submit Jurnal → Review → Revisi → Publikasi.</p>
+                </div>
+              )
+            },
+            {
+              label: "Penilaian TB",
+              content: (
+                <div>
+                  <h3 style={{ marginBottom: '1rem' }}>Indikator Penilaian Tugas Besar (35%)</h3>
+                  <table style={{ width: '100%', textAlign: 'left', borderCollapse: 'collapse', fontSize: '0.9em' }}>
+                    <tbody>
+                      <tr style={{ borderBottom: '1px solid var(--hair)', background: 'var(--surface-2)' }}>
+                        <th style={{ padding: '0.75rem' }}>Kriteria</th>
+                        <th style={{ padding: '0.75rem' }}>Nilai</th>
+                      </tr>
+                      <tr style={{ borderBottom: '1px solid var(--hair)' }}>
+                        <td style={{ padding: '0.75rem' }}><strong>Submitted Jurnal:</strong> Dikumpulkan sesuai format dan deadline</td>
+                        <td style={{ padding: '0.75rem', fontWeight: 'bold', color: 'var(--accent)' }}>B</td>
+                      </tr>
+                      <tr style={{ borderBottom: '1px solid var(--hair)' }}>
+                        <td style={{ padding: '0.75rem' }}><strong>On Review:</strong> Masuk proses review & dipresentasikan/direview mhs lain</td>
+                        <td style={{ padding: '0.75rem', fontWeight: 'bold', color: 'var(--accent)' }}>AB</td>
+                      </tr>
+                      <tr style={{ borderBottom: '1px solid var(--hair)' }}>
+                        <td style={{ padding: '0.75rem' }}><strong>Published:</strong> Diterbitkan di repositori/jurnal internal/laman publikasi</td>
+                        <td style={{ padding: '0.75rem', fontWeight: 'bold', color: 'var(--accent)' }}>A</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              )
+            }
+          ]}
+        />
+      </Slide>
+
+      {/* 3. Agenda / Course Overview */}
       <Slide notes="Berikut adalah peta perjalanan kita selama 16 minggu ke depan.">
         <Agenda
           title="Peta Perkuliahan 16 Minggu"
@@ -496,14 +571,14 @@ export function ProductList() {
                 <td style={{ padding: '1rem' }}>Progress Pengembangan Aplikasi</td>
               </tr>
               <tr style={{ borderBottom: '1px solid var(--hair)' }}>
-                <td style={{ padding: '1rem' }}>Tugas Besar</td>
-                <td style={{ padding: '1rem' }}>30%</td>
-                <td style={{ padding: '1rem' }}>Aplikasi SIB UMKM (Individu/Kelompok)</td>
+                <td style={{ padding: '1rem' }}>Tugas Besar (Individu)</td>
+                <td style={{ padding: '1rem' }}>35%</td>
+                <td style={{ padding: '1rem' }}>Aplikasi SIB UMKM & Publikasi Jurnal</td>
               </tr>
               <tr>
-                <td style={{ padding: '1rem' }}>Presentasi & Jurnal</td>
-                <td style={{ padding: '1rem' }}>20%</td>
-                <td style={{ padding: '1rem' }}>Artikel Ilmiah dan Paparan Final</td>
+                <td style={{ padding: '1rem' }}>Presentasi / Review</td>
+                <td style={{ padding: '1rem' }}>15%</td>
+                <td style={{ padding: '1rem' }}>Pemaparan Final & Peer Review</td>
               </tr>
             </tbody>
           </table>
