@@ -67,42 +67,44 @@ export default function App() {
 
       {/* 3. SubCPMK 1 — Pengantar SIB */}
       <Slide notes="Tanyakan ke mahasiswa: contoh SIB yang mereka gunakan sehari-hari.">
-        <Split>
-          <div>
-            <Reveal>
-              <h2>Apa itu Sistem Informasi Bisnis?</h2>
-            </Reveal>
-            <p>
-              SIB adalah sistem terintegrasi yang mengumpulkan, memproses, menyimpan, dan mendistribusikan informasi untuk mendukung pengambilan keputusan bisnis. Mencakup dimensi manajemen, organisasi, dan teknologi.
-            </p>
-            <ul>
-              <Build at={1}>
-                <li><strong>Definisi:</strong> Sistem sosioteknikal untuk manajemen informasi.</li>
-              </Build>
-              <Build at={2}>
-                <li><strong>Tipe:</strong> TPS, MIS, DSS, ESS.</li>
-              </Build>
-              <Build at={3}>
-                <li><strong>Fungsi:</strong> Operasional, Manajerial, Strategis.</li>
-              </Build>
-            </ul>
-          </div>
-          <BrowserFrame>
-            <div style={{ padding: '2rem', background: 'var(--surface)', height: '100%' }}>
-              <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: '1fr 1fr' }}>
-                <div style={{ background: 'var(--surface-2)', padding: '1rem', borderRadius: 'var(--radius-sm)' }}>
-                  <h4>Sales YTD</h4>
-                  <p style={{ fontSize: '2rem', color: 'var(--primary)' }}>$42,000</p>
+        <Split
+          title="Apa itu Sistem Informasi Bisnis?"
+          body={
+            <>
+              <p>
+                SIB adalah sistem terintegrasi yang mengumpulkan, memproses, menyimpan, dan mendistribusikan informasi untuk mendukung pengambilan keputusan bisnis.
+              </p>
+              <ul>
+                <Build at={1}>
+                  <li><strong>Definisi:</strong> Sistem sosioteknikal untuk manajemen informasi.</li>
+                </Build>
+                <Build at={2}>
+                  <li><strong>Tipe:</strong> TPS, MIS, DSS, ESS.</li>
+                </Build>
+                <Build at={3}>
+                  <li><strong>Fungsi:</strong> Operasional, Manajerial, Strategis.</li>
+                </Build>
+              </ul>
+            </>
+          }
+          media={
+            <BrowserFrame>
+              <div style={{ padding: '2rem', background: 'var(--surface)', height: '100%' }}>
+                <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: '1fr 1fr' }}>
+                  <div style={{ background: 'var(--surface-2)', padding: '1rem', borderRadius: 'var(--radius-sm)' }}>
+                    <h4>Sales YTD</h4>
+                    <p style={{ fontSize: '2rem', color: 'var(--primary)' }}>$42,000</p>
+                  </div>
+                  <div style={{ background: 'var(--surface-2)', padding: '1rem', borderRadius: 'var(--radius-sm)' }}>
+                    <h4>Active Users</h4>
+                    <p style={{ fontSize: '2rem', color: 'var(--accent)' }}>1,204</p>
+                  </div>
+                  <div style={{ gridColumn: '1 / -1', background: 'var(--surface-2)', height: '200px', borderRadius: 'var(--radius-sm)' }}></div>
                 </div>
-                <div style={{ background: 'var(--surface-2)', padding: '1rem', borderRadius: 'var(--radius-sm)' }}>
-                  <h4>Active Users</h4>
-                  <p style={{ fontSize: '2rem', color: 'var(--accent)' }}>1,204</p>
-                </div>
-                <div style={{ gridColumn: '1 / -1', background: 'var(--surface-2)', height: '200px', borderRadius: 'var(--radius-sm)' }}></div>
               </div>
-            </div>
-          </BrowserFrame>
-        </Split>
+            </BrowserFrame>
+          }
+        />
       </Slide>
 
       {/* 4. SubCPMK 1 — Strategi Bisnis */}
@@ -130,51 +132,51 @@ export default function App() {
 
       {/* 5. SubCPMK 2 — Organisasi & Enterprise Network */}
       <Slide notes="Jelaskan masing-masing pilar pembentuk SIB.">
-        <Reveal>
-          <h2>Organisasi, Manajemen & Enterprise Network</h2>
-        </Reveal>
-        <Bento>
-          <div className="bento-tile" style={{ gridColumn: 'span 2', gridRow: 'span 2', background: 'var(--primary)', color: 'var(--bg)' }}>
-            <h3>Organisasi</h3>
-            <p>Struktur hierarki, budaya, politik, dan proses bisnis.</p>
-          </div>
-          <div className="bento-tile">
-            <h3>Manajemen</h3>
-            <p>Pengambilan keputusan, alokasi sumber daya, kepemimpinan.</p>
-          </div>
-          <div className="bento-tile">
-            <h3>Enterprise Network</h3>
-            <p>Jaringan lintas organisasi untuk koordinasi dan kolaborasi.</p>
-          </div>
-          <div className="bento-tile" style={{ gridColumn: 'span 2', padding: 0, overflow: 'hidden' }}>
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800" alt="Network" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-          </div>
-        </Bento>
+        <Bento
+          title="Organisasi, Manajemen & Enterprise Network"
+          tiles={[
+            {
+              title: "Organisasi",
+              body: "Struktur hierarki, budaya, politik, dan proses bisnis.",
+              c: 8,
+              r: 2,
+              variant: "accent"
+            },
+            {
+              title: "Manajemen",
+              body: "Pengambilan keputusan, alokasi sumber daya, kepemimpinan.",
+              c: 4,
+              r: 1
+            },
+            {
+              title: "Enterprise Network",
+              body: "Jaringan lintas organisasi untuk koordinasi dan kolaborasi.",
+              c: 4,
+              r: 1
+            },
+            {
+              img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+              c: 12,
+              r: 2
+            }
+          ]}
+        />
       </Slide>
 
       {/* 6. SubCPMK 2 — SWOT UMKM */}
       <Slide notes="Tugas-1: Survei ke UMKM di sekitar kampus/tempat tinggal.">
         <Reveal>
-          <h2>Analisis SWOT untuk Kebutuhan Organisasi (Studi Kasus UMKM)</h2>
+          <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Analisis SWOT UMKM</h2>
         </Reveal>
-        <Comparison>
-          <div>
-            <h3>Kekuatan (S) & Peluang (O)</h3>
-            <ul>
-              <li>Fleksibilitas tinggi dalam operasional</li>
-              <li>Pangsa pasar lokal yang kuat</li>
-              <li>Peluang digitalisasi (e-commerce)</li>
-            </ul>
-          </div>
-          <div className="highlight">
-            <h3>Kelemahan (W) & Ancaman (T)</h3>
-            <ul>
-              <li>Keterbatasan modal dan SDM IT</li>
-              <li>Proses bisnis masih manual</li>
-              <li>Persaingan dengan perusahaan besar</li>
-            </ul>
-          </div>
-        </Comparison>
+        <Comparison
+          cols={["Karakteristik", "Kekuatan (S) & Peluang (O)", "Kelemahan (W) & Ancaman (T)"]}
+          highlight={2}
+          rows={[
+            { label: "Operasional", values: ["Fleksibilitas tinggi", "Proses bisnis masih manual"] },
+            { label: "Pasar", values: ["Pangsa lokal yang kuat", "Persaingan perusahaan besar"] },
+            { label: "Sumber Daya", values: ["Peluang digitalisasi (e-commerce)", "Keterbatasan modal & SDM IT"] }
+          ]}
+        />
         <Build at={1}>
           <div style={{ marginTop: '2rem', padding: '1rem', background: 'var(--surface-2)', borderRadius: 'var(--radius)' }}>
             <h4>Strategi Pengembangan</h4>
@@ -185,42 +187,25 @@ export default function App() {
 
       {/* 7. SubCPMK 2 — Infrastruktur TI */}
       <Slide notes="Diskusikan trade-off cloud vs on-premise.">
-        <Reveal>
-          <h2>Infrastruktur TI dalam SIB</h2>
-        </Reveal>
-        <StatGrid>
-          <div className="stat-card">
-            <div className="stat-value"><CountUp to={99.7} suffix="%" /></div>
-            <div className="stat-label">Uptime infrastruktur cloud</div>
-            <div className="stat-source">Sumber: Gartner, 2024</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-value"><CountUp to={5} suffix=" B+" /></div>
-            <div className="stat-label">Pengguna Internet global</div>
-            <div className="stat-source">Sumber: ITU</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-value"><CountUp to={3.6} prefix="$" suffix=" T" decimals={1} /></div>
-            <div className="stat-label">Nilai B2B e-commerce AS</div>
-            <div className="stat-source">Sumber: U.S. Census</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-value"><CountUp to={78} suffix="%" /></div>
-            <div className="stat-label">Perusahaan gunakan cloud</div>
-            <div className="stat-source">Sumber: Flexera</div>
-          </div>
-        </StatGrid>
+        <StatGrid
+          title="Infrastruktur TI dalam SIB"
+          stats={[
+            { value: <CountUp to={99.7} suffix="%" />, label: "Uptime infrastruktur cloud", caption: "Sumber: Gartner, 2024" },
+            { value: <CountUp to={5} suffix=" B+" />, label: "Pengguna Internet global", caption: "Sumber: ITU" },
+            { value: <CountUp to={3.6} prefix="$" suffix=" T" decimals={1} />, label: "Nilai B2B e-commerce AS", caption: "Sumber: U.S. Census" },
+            { value: <CountUp to={78} suffix="%" />, label: "Perusahaan gunakan cloud", caption: "Sumber: Flexera" }
+          ]}
+        />
       </Slide>
 
       {/* 8. SubCPMK 3 — Aplikasi Kunci SIB */}
       <Slide notes="Fokus pada bagaimana aplikasi-aplikasi ini menyelesaikan masalah bisnis UMKM.">
         <Reveal>
-          <h2>Aplikasi Kunci SIB di Era Digital</h2>
+          <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Aplikasi Kunci SIB di Era Digital</h2>
         </Reveal>
         <Tabs
           tabs={[
             {
-              id: "erp",
               label: "ERP",
               content: (
                 <div>
@@ -230,7 +215,6 @@ export default function App() {
               )
             },
             {
-              id: "scm",
               label: "SCM",
               content: (
                 <div>
@@ -240,7 +224,6 @@ export default function App() {
               )
             },
             {
-              id: "crm",
               label: "CRM",
               content: (
                 <div>
@@ -250,7 +233,6 @@ export default function App() {
               )
             },
             {
-              id: "kms",
               label: "KMS",
               content: (
                 <div>
@@ -260,7 +242,6 @@ export default function App() {
               )
             },
             {
-              id: "bi",
               label: "BI/Analytics",
               content: (
                 <div>
@@ -275,56 +256,50 @@ export default function App() {
 
       {/* 9. SubCPMK 3 — RAD Tools */}
       <Slide notes="Jelaskan bahwa RAD memungkinkan UMKM membangun aplikasi dengan cepat.">
-        <Reveal>
-          <h2>User Guide RAD Tools: Pengembangan Aplikasi</h2>
-        </Reveal>
-        <Steps>
-          <div className="step">
-            <h3>1. Identifikasi Kebutuhan</h3>
-            <p>Analisis proses bisnis UMKM yang ingin didigitalisasi.</p>
-          </div>
-          <div className="step">
-            <h3>2. Desain Prototipe</h3>
-            <p>Mockup UI/UX dengan RAD Tools.</p>
-          </div>
-          <div className="step">
-            <h3>3. Pengembangan Iteratif</h3>
-            <p>Build, test, iterate secara berkelanjutan.</p>
-          </div>
-          <div className="step">
-            <h3>4. Deployment</h3>
-            <p>Rilis ke UMKM untuk digunakan dalam operasional.</p>
-          </div>
-          <div className="step">
-            <h3>5. Evaluasi</h3>
-            <p>Kumpulkan umpan balik dan lakukan perbaikan.</p>
-          </div>
-        </Steps>
+        <Steps
+          title="User Guide RAD Tools: Pengembangan Aplikasi"
+          items={[
+            { title: "Identifikasi Kebutuhan", body: "Analisis proses bisnis UMKM yang ingin didigitalisasi." },
+            { title: "Desain Prototipe", body: "Mockup UI/UX dengan RAD Tools." },
+            { title: "Pengembangan Iteratif", body: "Build, test, iterate secara berkelanjutan." },
+            { title: "Deployment", body: "Rilis ke UMKM untuk operasional." },
+            { title: "Evaluasi", body: "Umpan balik dan perbaikan." }
+          ]}
+        />
       </Slide>
 
       {/* 10. SubCPMK 3 — Proposal Proyek SIB */}
       <Slide notes="Tugas Besar dimulai dari sini.">
-        <Reveal>
-          <h2>Proposal Proyek SIB</h2>
-        </Reveal>
-        <Bento>
-          <div className="bento-tile" style={{ gridColumn: 'span 2', background: 'var(--accent)', color: 'var(--accent-ink)' }}>
-            <h3>Latar Belakang</h3>
-            <p>Masalah bisnis UMKM secara spesifik yang akan diselesaikan oleh SIB yang diusulkan.</p>
-          </div>
-          <div className="bento-tile">
-            <h3>Tujuan</h3>
-            <p>Solusi SIB dan dampak bisnis yang diharapkan.</p>
-          </div>
-          <div className="bento-tile">
-            <h3>Ruang Lingkup</h3>
-            <p>Fitur utama, pengguna sistem, dan batasan implementasi.</p>
-          </div>
-          <div className="bento-tile" style={{ gridColumn: 'span 2' }}>
-            <h3>Kebutuhan Sistem</h3>
-            <p>Kebutuhan Hardware, Software, Data, dan SDM.</p>
-          </div>
-        </Bento>
+        <Bento
+          title="Proposal Proyek SIB"
+          tiles={[
+            {
+              title: "Latar Belakang",
+              body: "Masalah bisnis UMKM secara spesifik yang akan diselesaikan oleh SIB yang diusulkan.",
+              c: 8,
+              r: 1,
+              variant: "accent"
+            },
+            {
+              title: "Tujuan",
+              body: "Solusi SIB dan dampak bisnis yang diharapkan.",
+              c: 4,
+              r: 1
+            },
+            {
+              title: "Ruang Lingkup",
+              body: "Fitur utama, pengguna sistem, dan batasan implementasi.",
+              c: 6,
+              r: 1
+            },
+            {
+              title: "Kebutuhan Sistem",
+              body: "Kebutuhan Hardware, Software, Data, dan SDM.",
+              c: 6,
+              r: 1
+            }
+          ]}
+        />
         <Build at={1}>
           <div style={{ marginTop: '1.5rem', padding: '1rem', border: '1px solid var(--hair)', borderRadius: 'var(--radius)' }}>
             <strong>Timeline Proyek:</strong> Analisis (M3) → Desain (M4) → Prototipe (M5) → Pengujian (M6) → Presentasi (M7)
@@ -334,68 +309,71 @@ export default function App() {
 
       {/* 11. SubCPMK 4 — Building Systems */}
       <Slide notes="Tugas Besar: Progres 1 — Perancangan aplikasi UMKM.">
-        <Split>
-          <div>
-            <Reveal>
-              <h2>Building & Managing Systems: Perancangan Aplikasi UMKM</h2>
-            </Reveal>
-            <p>
-              Tahap perancangan mencakup analisis kebutuhan, desain arsitektur, desain database, dan desain antarmuka. Gunakan pendekatan user-centered design.
-            </p>
-            <ul>
-              <Build at={1}>
-                <li><strong>Analisis Kebutuhan:</strong> Use case dan alur bisnis.</li>
-              </Build>
-              <Build at={2}>
-                <li><strong>Desain Arsitektur & Database:</strong> ERD, skema tabel, integrasi API.</li>
-              </Build>
-            </ul>
-          </div>
-          <BrowserFrame>
-            <div style={{ padding: '1rem', background: '#fff', color: '#111', height: '100%', fontFamily: 'sans-serif' }}>
-              <div style={{ borderBottom: '1px solid #ccc', paddingBottom: '0.5rem', marginBottom: '1rem' }}>
-                <strong>UMKM Inventory System</strong>
-              </div>
-              <div style={{ display: 'flex', gap: '1rem' }}>
-                <div style={{ width: '150px', background: '#f5f5f5', padding: '1rem', height: '200px' }}>
-                  <p>Dashboard</p>
-                  <p><b>Products</b></p>
-                  <p>Orders</p>
+        <Split
+          title="Building & Managing Systems: Perancangan"
+          body={
+            <>
+              <p>
+                Tahap perancangan mencakup analisis kebutuhan, desain arsitektur, desain database, dan desain antarmuka.
+              </p>
+              <ul>
+                <Build at={1}>
+                  <li><strong>Analisis Kebutuhan:</strong> Use case dan alur bisnis.</li>
+                </Build>
+                <Build at={2}>
+                  <li><strong>Desain Arsitektur & Database:</strong> ERD, skema tabel, integrasi API.</li>
+                </Build>
+              </ul>
+            </>
+          }
+          media={
+            <BrowserFrame>
+              <div style={{ padding: '1rem', background: '#fff', color: '#111', height: '100%', fontFamily: 'sans-serif' }}>
+                <div style={{ borderBottom: '1px solid #ccc', paddingBottom: '0.5rem', marginBottom: '1rem' }}>
+                  <strong>UMKM Inventory System</strong>
                 </div>
-                <div style={{ flex: 1 }}>
-                  <h3>Product List</h3>
-                  <table style={{ width: '100%', textAlign: 'left', borderCollapse: 'collapse' }}>
-                    <tbody>
-                      <tr style={{ borderBottom: '1px solid #eee' }}><th>ID</th><th>Name</th><th>Stock</th></tr>
-                      <tr><td>001</td><td>Keripik Singkong</td><td>45</td></tr>
-                      <tr><td>002</td><td>Kopi Bubuk</td><td>12</td></tr>
-                    </tbody>
-                  </table>
+                <div style={{ display: 'flex', gap: '1rem' }}>
+                  <div style={{ width: '150px', background: '#f5f5f5', padding: '1rem', height: '200px' }}>
+                    <p>Dashboard</p>
+                    <p><b>Products</b></p>
+                    <p>Orders</p>
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <h3>Product List</h3>
+                    <table style={{ width: '100%', textAlign: 'left', borderCollapse: 'collapse' }}>
+                      <tbody>
+                        <tr style={{ borderBottom: '1px solid #eee' }}><th>ID</th><th>Name</th><th>Stock</th></tr>
+                        <tr><td>001</td><td>Keripik Singkong</td><td>45</td></tr>
+                        <tr><td>002</td><td>Kopi Bubuk</td><td>12</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
-            </div>
-          </BrowserFrame>
-        </Split>
+            </BrowserFrame>
+          }
+        />
       </Slide>
 
       {/* 12. SubCPMK 4 — Implementasi RAD */}
       <Slide notes="Tugas Besar: Progres 2 — Pengembangan aplikasi.">
-        <Split>
-          <div>
-            <Reveal>
-              <h2>Implementasi Aplikasi dengan RAD Tools</h2>
-            </Reveal>
-            <p>Menerapkan rancangan ke dalam platform RAD atau kode aktual.</p>
-            <ul>
-              <Build at={1}>
-                <li><strong>Sprint 1:</strong> Setup project & Authentication.</li>
-              </Build>
-              <Build at={2}>
-                <li><strong>Sprint 2:</strong> Product Management (CRUD).</li>
-              </Build>
-            </ul>
-          </div>
-          <CodeWindow language="tsx">
+        <Split
+          title="Implementasi dengan RAD Tools"
+          body={
+            <>
+              <p>Menerapkan rancangan ke dalam platform RAD atau kode aktual.</p>
+              <ul>
+                <Build at={1}>
+                  <li><strong>Sprint 1:</strong> Setup project & Authentication.</li>
+                </Build>
+                <Build at={2}>
+                  <li><strong>Sprint 2:</strong> Product Management (CRUD).</li>
+                </Build>
+              </ul>
+            </>
+          }
+          media={
+            <CodeWindow language="tsx">
 {`// ProductList.tsx
 import React, { useState, useEffect } from 'react';
 import { getProducts } from './api';
@@ -418,37 +396,22 @@ export function ProductList() {
     </table>
   );
 }`}
-          </CodeWindow>
-        </Split>
+            </CodeWindow>
+          }
+        />
       </Slide>
 
       {/* 13. SubCPMK 4 — Pengujian */}
       <Slide notes="Tugas Besar: Progres 3 — Implementasi & Progres 4 — Pengujian.">
         <Reveal>
-          <h2>Pengujian dan Perbaikan Aplikasi</h2>
+          <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Pengujian dan Perbaikan Aplikasi</h2>
         </Reveal>
         <Timeline
-          events={[
-            {
-              title: "Unit Testing",
-              description: "Test setiap fungsi/modul secara terpisah.",
-              active: true
-            },
-            {
-              title: "Integration Testing",
-              description: "Test interaksi antar modul.",
-              active: true
-            },
-            {
-              title: "User Acceptance Testing",
-              description: "Test dengan pengguna UMKM.",
-              active: true
-            },
-            {
-              title: "Performance Testing",
-              description: "Test beban dan responsivitas.",
-              active: true
-            }
+          items={[
+            { time: "T-1", title: "Unit Testing", body: "Test setiap fungsi secara terpisah." },
+            { time: "T-2", title: "Integration Testing", body: "Test interaksi antar modul." },
+            { time: "T-3", title: "User Acceptance Testing", body: "Test dengan pengguna UMKM." },
+            { time: "T-4", title: "Performance Testing", body: "Test beban dan responsivitas." }
           ]}
         />
       </Slide>
@@ -456,58 +419,41 @@ export function ProductList() {
       {/* 14. SubCPMK 5 — Evaluasi Efektivitas */}
       <Slide notes="Diskusikan metrik evaluasi: ROI, time savings, error reduction.">
         <BigNumber
-          number={<CountUp to={87} suffix="%" />}
-          label="Peningkatan efisiensi operasional UMKM setelah implementasi SIB."
+          value={<CountUp to={87} suffix="%" />}
+          caption="Peningkatan efisiensi operasional UMKM setelah implementasi SIB."
+          foot="Sumber: Studi kasus implementasi SIB UMKM, 2024."
         />
-        <div style={{ textAlign: 'center', opacity: 0.7, marginTop: '2rem' }}>
-          Sumber: Studi kasus implementasi SIB UMKM, 2024.
-        </div>
       </Slide>
 
       {/* 15. SubCPMK 5 — Penulisan Jurnal */}
       <Slide notes="Template jurnal tersedia di Google Classroom.">
         <Reveal>
-          <h2>Penulisan Jurnal Sistem Informasi Bisnis</h2>
+          <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Penulisan Jurnal SIB</h2>
         </Reveal>
         <Accordion
           items={[
-            { title: "1. Judul", content: "Singkat, spesifik, mencerminkan kontribusi." },
-            { title: "2. Abstrak", content: "150–250 kata: tujuan, metode, hasil, kesimpulan." },
-            { title: "3. Pendahuluan", content: "Latar belakang, rumusan masalah, tujuan penelitian." },
-            { title: "4. Metode", content: "Deskripsi pendekatan pengembangan (RAD) dan evaluasi sistem." },
-            { title: "5. Hasil dan Pembahasan", content: "Data implementasi, UI/UX, analisis efektivitas, dan interpretasi." },
-            { title: "6. Kesimpulan & Referensi", content: "Ringkasan temuan utama, keterbatasan, min. 5 referensi jurnal terakreditasi." }
+            { title: "1. Judul", body: "Singkat, spesifik, mencerminkan kontribusi." },
+            { title: "2. Abstrak", body: "150–250 kata: tujuan, metode, hasil, kesimpulan." },
+            { title: "3. Pendahuluan", body: "Latar belakang, rumusan masalah, tujuan penelitian." },
+            { title: "4. Metode", body: "Deskripsi pendekatan pengembangan (RAD) dan evaluasi sistem." },
+            { title: "5. Hasil dan Pembahasan", body: "Data implementasi, UI/UX, analisis efektivitas, dan interpretasi." },
+            { title: "6. Kesimpulan & Referensi", body: "Ringkasan temuan utama, keterbatasan, min. 5 referensi jurnal terakreditasi." }
           ]}
         />
       </Slide>
 
       {/* 16. SubCPMK 5 — Presentasi & Publikasi */}
       <Slide notes="Pastikan semua mahasiswa mendapat umpan balik.">
-        <Reveal>
-          <h2>Presentasi Final Project & Publikasi Jurnal</h2>
-        </Reveal>
-        <Steps>
-          <div className="step">
-            <h3>Submit Jurnal</h3>
-            <p>Kumpulkan draf awal sesuai format dan tenggat.</p>
-          </div>
-          <div className="step">
-            <h3>Peer Review</h3>
-            <p>Review jurnal antar mahasiswa / kelompok untuk perbaikan kualitas.</p>
-          </div>
-          <div className="step">
-            <h3>Revisi</h3>
-            <p>Perbaikan artikel berdasarkan umpan balik reviewer dan dosen.</p>
-          </div>
-          <div className="step">
-            <h3>Presentasi Final</h3>
-            <p>Presentasi proyek dan pemaparan hasil implementasi (UAS).</p>
-          </div>
-          <div className="step">
-            <h3>Publikasi</h3>
-            <p>Revisi akhir dan submit ke jurnal/prosiding SIB.</p>
-          </div>
-        </Steps>
+        <Steps
+          title="Presentasi Final & Publikasi Jurnal"
+          items={[
+            { title: "Submit Jurnal", body: "Kumpulkan draf awal sesuai format dan tenggat." },
+            { title: "Peer Review", body: "Review jurnal antar mahasiswa / kelompok untuk perbaikan kualitas." },
+            { title: "Revisi", body: "Perbaikan artikel berdasarkan umpan balik reviewer dan dosen." },
+            { title: "Presentasi Final", body: "Presentasi proyek dan pemaparan hasil implementasi (UAS)." },
+            { title: "Publikasi", body: "Revisi akhir dan submit ke jurnal/prosiding SIB." }
+          ]}
+        />
       </Slide>
 
       {/* 17. Assessment */}
